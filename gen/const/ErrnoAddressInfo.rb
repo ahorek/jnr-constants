@@ -19,6 +19,6 @@ def gen_errnoaddressinfo_java(options)
       EAI_BADHINTS
       EAI_PROTOCOL
       EAI_MAX
-    ].each {|c| cg.const c }
+    ].each {|c| cg.const c, "%lu", "(unsigned long)"}
   end
 end
