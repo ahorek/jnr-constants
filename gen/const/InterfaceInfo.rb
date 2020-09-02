@@ -61,7 +61,7 @@ def gen_interfaceinfo_java(options)
       IFF_XMIT_DST_RELEASE
       IFF_VOLATILE
       IFF_CANTCHANGE
-    ].each {|c| cg.const c }
+    ].each { |c| cg.const(c, '%ld', '(long int)') }
   end
 end
     
